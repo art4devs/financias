@@ -1,0 +1,15 @@
+{
+    "name": "developer/financias",
+    "authors": [
+        {
+            "name": "Danilo Tiago",
+            "email": "programacao.desenvolvimento@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Financias\\": "src/"
+        }
+    }
+}
