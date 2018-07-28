@@ -1,6 +1,6 @@
 <?php
 return [
-    'desenvolvimento' => [
+    'dev' => [
         'driver'    => 'mysql',
         'host'      => '127.0.0.1',
         'database'  => 'financias',
