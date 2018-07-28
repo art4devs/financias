@@ -6,10 +6,12 @@
             "email": "programacao.desenvolvimento@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "robmorgan/phinx": "0.10.5"
+    },
     "autoload": {
         "psr-4": {
-            "Financias\\": "src/"
+            "Financias\\": "aplicacao/"
         }
     }
 }
