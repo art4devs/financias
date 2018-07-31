@@ -14,19 +14,19 @@ class CategoryCostsSeeder extends AbstractSeed
      */
     public function run()
     {
-        $ccTable = $this->table('category_costs');
+        $ccTable      = $this->table('category_costs');
+        $faker        = Faker\Factory::create('pt_BR');
+        $registers    = 10;
+        $categories   = [];
 
-        $ccTable->insert([
-            [
-                'name'       => 'Categoria 1',
+        while ($registers > 0) {
+            $categories[] = [
+                'name'       => $faker->name,
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
-            ],
-            [
-                'name'       => 'Categoria 2',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s')
-            ]
-        ])->save();
+            ];
+            $registers--;
+        }
+        $ccTable->insert($categories)->save();
     }
 }
