@@ -7,6 +7,7 @@ use Aura\Router\RouterContainer;
 use Financias\ServiceContainerInterface;
 use Interop\Container\ContainerInterface;
 use Psr\Http\Message\RequestInterface;
+use Zend\Diactoros\ServerRequestFactory;
 
 class RoutePlugin implements PluginInterface
 {
@@ -38,6 +39,8 @@ class RoutePlugin implements PluginInterface
 
     protected function getRequest(): RequestInterface
     {
-
+        return ServerRequestFactory::fromGlobals(
+            $_SERVER, $_GET, $_POST, $_FILES
+        );
     }
 }
